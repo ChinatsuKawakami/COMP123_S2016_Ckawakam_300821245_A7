@@ -31,7 +31,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
         }
         private void FirstForm_FormClosed(object sender, EventArgs e)
         {
-            this.FirstForm.Close();
+            this.Close();
         }
 
 

@@ -14,7 +14,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
   * Author: Chinatsu Kawakami
   * Create Date: 8th August 2016
   * Modified Date: 10th August 2016
-  * Version: 0.0.3 - Added Events to push NextButton in SelectionForm, to push Next,Stream,BackButton in OrderForm
+  * Version: 0.0.4 - Added Event which happens if user push Print, About, Stream Menu Selection
   */
     public partial class SelectionForm : Form
     {
@@ -26,6 +26,9 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+            //Gray-out this From if user pushes Next Button
+            this.Enabled = false;
+
             this.SecondForm.TitleTextBox.Text = this.TitleTextBox.Text;
             this.SecondForm.CategoryTextBox.Text = this.CategoryTextBox.Text;
             this.SecondForm.CostTextBox.Text = this.CostTextBox.Text;
