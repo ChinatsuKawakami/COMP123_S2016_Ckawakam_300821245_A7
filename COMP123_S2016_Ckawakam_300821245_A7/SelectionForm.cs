@@ -14,7 +14,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
   * Author: Chinatsu Kawakami
   * Create Date: 8th August 2016
   * Modified Date: 10th August 2016
-  * Version: 0.0.4 - Added Event which happens if user push Print, About, Stream Menu Selection
+  * Version: 0.0.5 - set Button and anylabels in StreamForm
   */
     public partial class SelectionForm : Form
     {

@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("COMP123_S2016_Ckawakam_300821245_A7")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("This program shows the form which users can watch or buy movie that they choose")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Toshiba")]
+[assembly: AssemblyCompany("Centennial College")]
 [assembly: AssemblyProduct("COMP123_S2016_Ckawakam_300821245_A7")]
-[assembly: AssemblyCopyright("Copyright © Toshiba 2016")]
+[assembly: AssemblyCopyright("Copyright © CentennialCollege")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

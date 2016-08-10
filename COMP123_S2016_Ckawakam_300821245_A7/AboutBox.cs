@@ -101,5 +101,15 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
             }
         }
         #endregion
+
+        private void textBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCompanyName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

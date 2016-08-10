@@ -18,6 +18,10 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            FirstForm = new SelectionForm();
+            SecondForm = new OrderForm();
+            ThirdForm = new StreamForm();
             SplashScreen = new SplashScreenForm();
             Application.Run(SplashScreen);
         }
