@@ -8,15 +8,18 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
 {
     static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+        public static SplashScreenForm SplashScreen;
+        public static SelectionForm FirstForm;
+        public static OrderForm SecondForm;
+        public static StreamForm ThirdForm;
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SelectionForm());
+            SplashScreen = new SplashScreenForm();
+            Application.Run(SplashScreen);
         }
     }
 }

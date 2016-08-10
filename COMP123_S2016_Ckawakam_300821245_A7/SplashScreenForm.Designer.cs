@@ -31,32 +31,47 @@
             this.components = new System.ComponentModel.Container();
             this.SplashScreenFromTimer = new System.Windows.Forms.Timer(this.components);
             this.SplashPictureBox = new System.Windows.Forms.PictureBox();
+            this.SplashLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SplashPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // SplashScreenFromTimer
             // 
             this.SplashScreenFromTimer.Interval = 1000;
+            this.SplashScreenFromTimer.Tick += new System.EventHandler(this.SplashScreenFromTimer_Tick);
             // 
             // SplashPictureBox
             // 
-            this.SplashPictureBox.Location = new System.Drawing.Point(45, 45);
+            this.SplashPictureBox.Image = global::COMP123_S2016_Ckawakam_300821245_A7.Properties.Resources.newcinema;
+            this.SplashPictureBox.Location = new System.Drawing.Point(56, 53);
             this.SplashPictureBox.Name = "SplashPictureBox";
-            this.SplashPictureBox.Size = new System.Drawing.Size(343, 180);
+            this.SplashPictureBox.Size = new System.Drawing.Size(377, 175);
             this.SplashPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SplashPictureBox.TabIndex = 0;
             this.SplashPictureBox.TabStop = false;
+            // 
+            // SplashLabel
+            // 
+            this.SplashLabel.AutoSize = true;
+            this.SplashLabel.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SplashLabel.Location = new System.Drawing.Point(50, 9);
+            this.SplashLabel.Name = "SplashLabel";
+            this.SplashLabel.Size = new System.Drawing.Size(385, 32);
+            this.SplashLabel.TabIndex = 1;
+            this.SplashLabel.Text = "Welcome to Movie Bonanza!";
             // 
             // SplashScreenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(494, 262);
+            this.Controls.Add(this.SplashLabel);
             this.Controls.Add(this.SplashPictureBox);
             this.Name = "SplashScreenForm";
             this.Text = "SplashScreenForm";
             ((System.ComponentModel.ISupportInitialize)(this.SplashPictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -64,5 +79,6 @@
 
         private System.Windows.Forms.Timer SplashScreenFromTimer;
         private System.Windows.Forms.PictureBox SplashPictureBox;
+        private System.Windows.Forms.Label SplashLabel;
     }
 }

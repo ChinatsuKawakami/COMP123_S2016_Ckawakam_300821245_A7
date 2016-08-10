@@ -75,12 +75,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SelectionForm.resx">
       <DependentUpon>SelectionForm.cs</DependentUpon>
@@ -105,7 +105,29 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Image\" />
+    <Content Include="Images\cedarrapids.jpg" />
+    <Content Include="Images\companymen.jpg" />
+    <Content Include="Images\deathrace2.jpg" />
+    <Content Include="Images\footloose.jpg" />
+    <Content Include="Images\gnomeoandjuliet.jpg" />
+    <Content Include="Images\iamnumberfour.jpg" />
+    <Content Include="Images\justgowithit.jpg" />
+    <Content Include="Images\nostringsattached.jpg" />
+    <Content Include="Images\realsteel.jpg" />
+    <Content Include="Images\sanctum.jpg" />
+    <Content Include="Images\seasonofthewitch.jpg" />
+    <Content Include="Images\thedilemma.jpg" />
+    <Content Include="Images\theeagle.jpg" />
+    <Content Include="Images\thegreenhornet.jpg" />
+    <Content Include="Images\themechanic.jpg" />
+    <Content Include="Images\theotherwoman.jpg" />
+    <Content Include="Images\therite.jpg" />
+    <Content Include="Images\theroommate.jpg" />
+    <Content Include="Images\thewayback.jpg" />
+    <Content Include="Images\waitingforever.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\newcinema.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
