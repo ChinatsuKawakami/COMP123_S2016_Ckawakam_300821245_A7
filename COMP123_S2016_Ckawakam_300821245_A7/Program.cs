@@ -16,7 +16,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new SelectionForm());
         }
     }
 }
