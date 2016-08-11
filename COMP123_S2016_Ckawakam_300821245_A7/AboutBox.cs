@@ -20,6 +20,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription;
+            this.AuthorNameLabel.Text = "Chinatsu Kawakami";
         }
 
         #region Assembly Attribute Accessors

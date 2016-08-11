@@ -14,14 +14,16 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
   * Author: Chinatsu Kawakami
   * Create Date: 8th August 2016
   * Modified Date: 10th August 2016
-  * Version: 0.0.5 - set Button and anylabels in StreamForm
+  * Version: 0.0.6 - updated SelectionForm to fix Event
   */
     public partial class SelectionForm : Form
     {
+
         public OrderForm SecondForm = Program.SecondForm;
         public SelectionForm()
         {
             InitializeComponent();
+            
         }
 
         private void NextButton_Click(object sender, EventArgs e)
@@ -40,6 +42,12 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
             this.Close();
             this.SecondForm.Show();
 
+        }
+
+        private void SelectionForm_Load(object sender, EventArgs e)
+        {
+            //int index = this.MovieListBox.SelectedIndex;
+            this.SelectionPictureBox.Image = this.MovieImageList.Images[0];
         }
 
       
