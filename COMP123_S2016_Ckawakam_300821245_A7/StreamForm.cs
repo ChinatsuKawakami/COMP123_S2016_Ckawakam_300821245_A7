@@ -17,5 +17,12 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
             InitializeComponent();
             this.Text = "Your Movie is about to start!";
         }
+
+        private void OKButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            //terminate??
+            Application.Exit();
+        }
     }
 }

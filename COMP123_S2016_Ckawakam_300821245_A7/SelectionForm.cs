@@ -12,9 +12,10 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
 {/*
   * Description:This is the Form to calculate to cost of the movies which come from dataserver
   * Author: Chinatsu Kawakami
+  * StudentID : 300821245
   * Create Date: 8th August 2016
-  * Modified Date: 10th August 2016
-  * Version: 0.0.6 - updated SelectionForm to fix Event
+  * Modified Date: 12th August 2016
+  * Version: 0.0.7 - updated OrderForm to fix calculation for subTotal,GrandTotal and updated StreamForm to displays movieTitle and TotalCost
   */
     public partial class SelectionForm : Form
     {
@@ -45,9 +46,12 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
         }
 
         private void SelectionForm_Load(object sender, EventArgs e)
-        {
+        { 
             //int index = this.MovieListBox.SelectedIndex;
-            this.SelectionPictureBox.Image = this.MovieImageList.Images[0];
+            for (int index = 0; index < 20; index++)
+            {
+                this.SelectionPictureBox.Image = this.MovieImageList.Images[index];
+            }
         }
 
       

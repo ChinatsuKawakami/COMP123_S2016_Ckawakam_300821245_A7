@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("COMP123_S2016_Ckawakam_300821245_A7")]
 [assembly: AssemblyDescription("This program shows the form which users can watch or buy movie that they choose")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Centennial College")]
+[assembly: AssemblyCompany("Movie Bonanza")]
 [assembly: AssemblyProduct("COMP123_S2016_Ckawakam_300821245_A7")]
-[assembly: AssemblyCopyright("Copyright © CentennialCollege")]
+[assembly: AssemblyCopyright("Copyright © CentennialCollege COMP123")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

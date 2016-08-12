@@ -43,7 +43,7 @@
             // 
             // SplashPictureBox
             // 
-            this.SplashPictureBox.Image = global::COMP123_S2016_Ckawakam_300821245_A7.Properties.Resources.newcinema;
+            this.SplashPictureBox.Image = global::COMP123_S2016_Ckawakam_300821245_A7.Properties.Resources.splashImage;
             this.SplashPictureBox.Location = new System.Drawing.Point(56, 53);
             this.SplashPictureBox.Name = "SplashPictureBox";
             this.SplashPictureBox.Size = new System.Drawing.Size(377, 175);
@@ -69,6 +69,7 @@
             this.Controls.Add(this.SplashLabel);
             this.Controls.Add(this.SplashPictureBox);
             this.Name = "SplashScreenForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashScreenForm";
             ((System.ComponentModel.ISupportInitialize)(this.SplashPictureBox)).EndInit();
             this.ResumeLayout(false);

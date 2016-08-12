@@ -11,6 +11,7 @@
     <AssemblyName>COMP123_S2016_Ckawakam_300821245_A7</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -103,7 +103,7 @@
       <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -135,31 +135,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\cedarrapids.jpg" />
-    <Content Include="Images\companymen.jpg" />
-    <Content Include="Images\deathrace2.jpg" />
-    <Content Include="Images\footloose.jpg" />
-    <Content Include="Images\gnomeoandjuliet.jpg" />
-    <Content Include="Images\iamnumberfour.jpg" />
-    <Content Include="Images\justgowithit.jpg" />
-    <Content Include="Images\nostringsattached.jpg" />
-    <Content Include="Images\realsteel.jpg" />
-    <Content Include="Images\sanctum.jpg" />
-    <Content Include="Images\seasonofthewitch.jpg" />
-    <Content Include="Images\thedilemma.jpg" />
-    <Content Include="Images\theeagle.jpg" />
-    <Content Include="Images\thegreenhornet.jpg" />
-    <Content Include="Images\themechanic.jpg" />
-    <Content Include="Images\theotherwoman.jpg" />
-    <Content Include="Images\therite.jpg" />
-    <Content Include="Images\theroommate.jpg" />
-    <Content Include="Images\thewayback.jpg" />
-    <Content Include="Images\waitingforever.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Image\newcinema.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
@@ -175,6 +150,31 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SplashImage\splashImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MovieImages\cedarrapids.jpg" />
+    <Content Include="MovieImages\companymen.jpg" />
+    <Content Include="MovieImages\deathrace2.jpg" />
+    <Content Include="MovieImages\footloose.jpg" />
+    <Content Include="MovieImages\gnomeoandjuliet.jpg" />
+    <Content Include="MovieImages\iamnumberfour.jpg" />
+    <Content Include="MovieImages\justgowithit.jpg" />
+    <Content Include="MovieImages\nostringsattached.jpg" />
+    <Content Include="MovieImages\realsteel.jpg" />
+    <Content Include="MovieImages\sanctum.jpg" />
+    <Content Include="MovieImages\seasonofthewitch.jpg" />
+    <Content Include="MovieImages\thedilemma.jpg" />
+    <Content Include="MovieImages\theeagle.jpg" />
+    <Content Include="MovieImages\thegreenhornet.jpg" />
+    <Content Include="MovieImages\themechanic.jpg" />
+    <Content Include="MovieImages\theotherwoman.jpg" />
+    <Content Include="MovieImages\therite.jpg" />
+    <Content Include="MovieImages\theroommate.jpg" />
+    <Content Include="MovieImages\thewayback.jpg" />
+    <Content Include="MovieImages\waitingforever.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -21,6 +21,8 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
             this.labelCompanyName.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription;
             this.AuthorNameLabel.Text = "Chinatsu Kawakami";
+            this.ContactLabel.Text = "416-819-1234";
+            this.WebsiteLabel.Text = "http://www.BonanzaMovie.com";
         }
 
         #region Assembly Attribute Accessors
@@ -109,6 +111,11 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
         }
 
         private void labelCompanyName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AboutBox_Load(object sender, EventArgs e)
         {
 
         }
