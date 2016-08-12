@@ -12,7 +12,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
         public static SelectionForm FirstForm;
         public static OrderForm SecondForm;
         public static StreamForm ThirdForm;
-
+        public static PrintForm MenuPrintForm;
         [STAThread]
         static void Main()
         {
@@ -22,6 +22,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
             SecondForm = new OrderForm();
             FirstForm = new SelectionForm();
             ThirdForm = new StreamForm();
+            MenuPrintForm = new PrintForm();
             SplashScreen = new SplashScreenForm();
             Application.Run(SplashScreen);
         }

@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace COMP123_S2016_Ckawakam_300821245_A7
 {
-    public partial class StreamForm : Form
+    
+    public partial class PrintForm : Form
     {
-        public StreamForm()
+        public OrderForm SecondForm = Program.SecondForm;
+        public PrintForm()
         {
             InitializeComponent();
-         
         }
 
-        private void OKButton_Click(object sender, EventArgs e)
+        private void PrintForm_Load(object sender, EventArgs e)
         {
-            this.Close();
-            //terminate??
-            Application.Exit();
+            //Make a reference to this From from OrderForm
+            this.SecondForm.MenuPrintForm = this;
+            
+
         }
+
+        
+       
     }
 }
