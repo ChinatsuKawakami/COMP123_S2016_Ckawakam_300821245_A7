@@ -16,7 +16,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
   * Create Date: 8th August 2016
   * Modified Date: 15th August 2016
   * Description: This Form displays which movie user choose and how much cost to get it (they come from DataBase Server)
-  * Version: 0.0.9 - Added List of Movies and Categories
+  * Version: 0.0.10 - Added List of Costs
   */
     public partial class SelectionForm : Form
     {
@@ -39,6 +39,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
                 {
                     1.99,2.99,0.99,4.99
                 });
+              
         }
 
         private void NextButton_Click(object sender, EventArgs e)
@@ -66,33 +67,33 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
 
         private void SelectionForm_Load(object sender, EventArgs e)
         { 
-            //int index = this.MovieListBox.SelectedIndex;
-            for (int index = 0; index < 20; index++)
-            {
-                this.SelectionPictureBox.Image = this.MovieImageList.Images[index];
-            }
-       
+           // Default Value
+
+            this.MovieListBox.SelectedIndex = 0;
 
         }
 
+      
         private void MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             
             
             TitleTextBox.Text = MovieListBox.SelectedItem.ToString();
           
-            switch((int)MovieListBox.SelectedItem)
+            switch((int)MovieListBox.SelectedIndex)
             {
                 case 2:
                 case 5:
                 case 13:
                 case 15:
-                    this.CategoryTextBox.Text = CategoryList[0];
+                    this.CategoryTextBox.Text = CategoryList[0]; 
+                    this.CostTextBox.Text = Cost[0].ToString();
                     break;
                 case 4:
                 case 6:
                 case 12:
                     this.CategoryTextBox.Text = CategoryList[1];
+                    this.CostTextBox.Text = Cost[0].ToString();
                     break;
                 case 1:
                 case 3:
@@ -101,33 +102,41 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
                 case 10:
                 case 16:
                     this.CategoryTextBox.Text = CategoryList[2];
+                    this.CostTextBox.Text = Cost[1].ToString();
                     break;
                 case 0:
                 case 17:
                     this.CategoryTextBox.Text = CategoryList[3];
+                    this.CostTextBox.Text = Cost[1].ToString();
                     break;
                 case 8:
                     this.CategoryTextBox.Text = CategoryList[4];
+                    this.CostTextBox.Text = Cost[1].ToString();
                     break;
                 case 11:
                     this.CategoryTextBox.Text = CategoryList[5];
+                    this.CostTextBox.Text = Cost[1].ToString();
                     break;
                 case 14:
                     this.CategoryTextBox.Text = CategoryList[6];
+                    this.CostTextBox.Text = Cost[2].ToString();
                     break;
                 case 18:
                  case 19:
                     this.CategoryTextBox.Text = CategoryList[7];
+                    this.CostTextBox.Text = Cost[3].ToString();
                     break;
 
-
-
-
             }
+
+        
+                 this.SelectionPictureBox.Image = this.MovieImageList.Images[(int)MovieListBox.SelectedIndex];
+              
+            }
+            
         }
 
      
-
-      
-    }
 }
+      
+ 
