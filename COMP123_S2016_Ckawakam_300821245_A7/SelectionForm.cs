@@ -14,9 +14,9 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
   * Author: Chinatsu Kawakami
   * StudentID : 300821245
   * Create Date: 8th August 2016
-  * Modified Date: 15th August 2016
+  * Modified Date: 16th August 2016
   * Description: This Form displays which movie user choose and how much cost to get it (they come from DataBase Server)
-  * Version: 0.0.10 - Added List of Costs
+  * Version: 0.0.11 - Changed in order to instance for all Form in Program.cs
   */
     public partial class SelectionForm : Form
     {
@@ -39,6 +39,8 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
                 {
                     1.99,2.99,0.99,4.99
                 });
+
+            
               
         }
 
@@ -60,9 +62,16 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
         
             SecondForm.FirstForm = this;
             this.SecondForm.Show();
-            this.Close();
+            // event handler for showing this form when SecondForm close
+            this.SecondForm.FormClosed += SecondForm_close;
+            this.Hide();
            
 
+        }
+
+        private void SecondForm_close(object sender, EventArgs e)
+        {
+            this.Show();
         }
 
         private void SelectionForm_Load(object sender, EventArgs e)
@@ -133,7 +142,8 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
                  this.SelectionPictureBox.Image = this.MovieImageList.Images[(int)MovieListBox.SelectedIndex];
               
             }
-            
+
+     
         }
 
      
