@@ -16,7 +16,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
   * Create Date: 8th August 2016
   * Modified Date: 16th August 2016
   * Description: This Form displays which movie user choose and how much cost to get it (they come from DataBase Server)
-  * Version: 0.0.11 - Changed in order to instance for all Form in Program.cs
+  * Version: 0.0.12 - Fixed Calculation in OrderForm 
   */
     public partial class SelectionForm : Form
     {
@@ -40,19 +40,20 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
                     1.99,2.99,0.99,4.99
                 });
 
-            
+               //Gray-out this From until user chooses movie
+               NextButton.Enabled = false;
               
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            //Gray-out this From if user pushes Next Button
-            this.Enabled = false;
+           
+           
 
             this.SecondForm.TitleTextBox.Text = this.TitleTextBox.Text;
             this.SecondForm.CategoryTextBox.Text = this.CategoryTextBox.Text;
             this.SecondForm.CostTextBox.Text = this.CostTextBox.Text;
-            this.SecondForm.SubTotalTextBox.Text = this.CostTextBox.Text;
+            //this.SecondForm.SubTotalTextBox.Text = this.CostTextBox.Text;
          
          
             this.SecondForm.OrderPictureBox.Image = this.SelectionPictureBox.Image;
@@ -85,7 +86,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
       
         private void MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            NextButton.Enabled = true;
             
             TitleTextBox.Text = MovieListBox.SelectedItem.ToString();
           
