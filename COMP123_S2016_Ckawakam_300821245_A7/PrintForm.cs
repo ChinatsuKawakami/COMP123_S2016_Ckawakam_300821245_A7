@@ -23,7 +23,10 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
         {
             //Make a reference to this From from OrderForm
             this.SecondForm.MenuPrintForm = this;
-            
+            this.TitleResultLabel.Text = SecondForm.TitleTextBox.Text;
+            this.CategoryResultLabel.Text = SecondForm.CategoryTextBox.Text;
+            this.CostResultLabel.Text = SecondForm.CostTextBox.Text;
+            this.SubtotalResultLabel.Text = SecondForm.SubTotalTextBox.Text;
 
         }
 

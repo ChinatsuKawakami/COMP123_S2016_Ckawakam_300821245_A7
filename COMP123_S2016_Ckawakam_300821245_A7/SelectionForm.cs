@@ -14,18 +14,31 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
   * Author: Chinatsu Kawakami
   * StudentID : 300821245
   * Create Date: 8th August 2016
-  * Modified Date: 12th August 2016
+  * Modified Date: 15th August 2016
   * Description: This Form displays which movie user choose and how much cost to get it (they come from DataBase Server)
-  * Version: 0.0.8 - Addedd PrintForm and Fix calculation for Grand Total in OrderForm
+  * Version: 0.0.9 - Added List of Movies and Categories
   */
     public partial class SelectionForm : Form
     {
         
         public OrderForm SecondForm = Program.SecondForm;
+
+        public List<string>CategoryList = new List<string>();
+         
+        public List<double> Cost = new List<double>();
+          
+
         public SelectionForm()
         {
             InitializeComponent();
-            
+               CategoryList.AddRange(new List<string>
+                {
+                  "Comedy","Drama","Action","Sci-Fi","Horror","Thriller","Family","New Releases"
+                });
+               Cost.AddRange(new List<double>
+                {
+                    1.99,2.99,0.99,4.99
+                });
         }
 
         private void NextButton_Click(object sender, EventArgs e)
@@ -58,7 +71,62 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
             {
                 this.SelectionPictureBox.Image = this.MovieImageList.Images[index];
             }
+       
+
         }
+
+        private void MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            
+            TitleTextBox.Text = MovieListBox.SelectedItem.ToString();
+          
+            switch((int)MovieListBox.SelectedItem)
+            {
+                case 2:
+                case 5:
+                case 13:
+                case 15:
+                    this.CategoryTextBox.Text = CategoryList[0];
+                    break;
+                case 4:
+                case 6:
+                case 12:
+                    this.CategoryTextBox.Text = CategoryList[1];
+                    break;
+                case 1:
+                case 3:
+                case 7:
+                case 9:
+                case 10:
+                case 16:
+                    this.CategoryTextBox.Text = CategoryList[2];
+                    break;
+                case 0:
+                case 17:
+                    this.CategoryTextBox.Text = CategoryList[3];
+                    break;
+                case 8:
+                    this.CategoryTextBox.Text = CategoryList[4];
+                    break;
+                case 11:
+                    this.CategoryTextBox.Text = CategoryList[5];
+                    break;
+                case 14:
+                    this.CategoryTextBox.Text = CategoryList[6];
+                    break;
+                case 18:
+                 case 19:
+                    this.CategoryTextBox.Text = CategoryList[7];
+                    break;
+
+
+
+
+            }
+        }
+
+     
 
       
     }
