@@ -14,32 +14,35 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
   * Author: Chinatsu Kawakami
   * StudentID : 300821245
   * Create Date: 8th August 2016
-  * Modified Date: 16th August 2016
+  * Modified Date: 18th August 2016
   * Description: This Form displays which movie user choose and how much cost to get it (they come from DataBase Server)
-  * Version: 0.0.12 - Fixed Calculation in OrderForm 
+  * Version: 0.0.13 - Changed the contents of MovieListBox from List to Database table
   */
     public partial class SelectionForm : Form
     {
-        
-        public OrderForm SecondForm = Program.SecondForm;
 
-        public List<string>CategoryList = new List<string>();
+        public OrderForm SecondForm;// = Program.SecondForm;
+      
+
+        public List<Models.MovieDataContext> Movies = new List<Models.MovieDataContext>();
+
+        public List<Models.CategoryDataContext> CategoryList = new List<Models.CategoryDataContext>();
          
-        public List<double> Cost = new List<double>();
+        public List<Models.CategoryDataContext> Cost = new List<Models.CategoryDataContext>();
           
 
         public SelectionForm()
         {
             InitializeComponent();
-               CategoryList.AddRange(new List<string>
-                {
-                  "Comedy","Drama","Action","Sci-Fi","Horror","Thriller","Family","New Releases"
-                });
-               Cost.AddRange(new List<double>
-                {
-                    1.99,2.99,0.99,4.99
-                });
-
+           //    CategoryList.AddRange(new List<string>
+            //    {
+            ///      "Comedy","Drama","Action","Sci-Fi","Horror","Thriller","Family","New Releases"
+            //    });
+            //   Cost.AddRange(new List<double>
+            //    {
+            //        1.99,2.99,0.99,4.99
+            //    });
+            
                //Gray-out this From until user chooses movie
                NextButton.Enabled = false;
               
@@ -47,7 +50,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-           
+            SecondForm = new OrderForm();
            
 
             this.SecondForm.TitleTextBox.Text = this.TitleTextBox.Text;
@@ -66,8 +69,9 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
             // event handler for showing this form when SecondForm close
             this.SecondForm.FormClosed += SecondForm_close;
             this.Hide();
-           
 
+          
+            
         }
 
         private void SecondForm_close(object sender, EventArgs e)
@@ -76,73 +80,97 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
         }
 
         private void SelectionForm_Load(object sender, EventArgs e)
-        { 
-           // Default Value
+        {
+            // TODO: This line of code loads data into the 'cOMP123DataSet.Categories' table. You can move, or remove it, as needed.
+            this.categoriesTableAdapter.Fill(this.cOMP123DataSet.Categories);
+          
+            
+            //this.dataGridView1
+            // this.movieTitle = Movie
 
-            this.MovieListBox.SelectedIndex = 0;
+            // Default Value
+           this.MovieListBox.SelectedIndex = 0;
+          
+            
 
         }
 
-      
+     
         private void MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             NextButton.Enabled = true;
-            
-            TitleTextBox.Text = MovieListBox.SelectedItem.ToString();
-          
-            switch((int)MovieListBox.SelectedIndex)
-            {
-                case 2:
-                case 5:
-                case 13:
-                case 15:
-                    this.CategoryTextBox.Text = CategoryList[0]; 
-                    this.CostTextBox.Text = Cost[0].ToString();
-                    break;
-                case 4:
-                case 6:
-                case 12:
-                    this.CategoryTextBox.Text = CategoryList[1];
-                    this.CostTextBox.Text = Cost[0].ToString();
-                    break;
-                case 1:
-                case 3:
-                case 7:
-                case 9:
-                case 10:
-                case 16:
-                    this.CategoryTextBox.Text = CategoryList[2];
-                    this.CostTextBox.Text = Cost[1].ToString();
-                    break;
-                case 0:
-                case 17:
-                    this.CategoryTextBox.Text = CategoryList[3];
-                    this.CostTextBox.Text = Cost[1].ToString();
-                    break;
-                case 8:
-                    this.CategoryTextBox.Text = CategoryList[4];
-                    this.CostTextBox.Text = Cost[1].ToString();
-                    break;
-                case 11:
-                    this.CategoryTextBox.Text = CategoryList[5];
-                    this.CostTextBox.Text = Cost[1].ToString();
-                    break;
-                case 14:
-                    this.CategoryTextBox.Text = CategoryList[6];
-                    this.CostTextBox.Text = Cost[2].ToString();
-                    break;
-                case 18:
-                 case 19:
-                    this.CategoryTextBox.Text = CategoryList[7];
-                    this.CostTextBox.Text = Cost[3].ToString();
-                    break;
 
-            }
+            this.TitleTextBox.Text = MovieListBox.Text;
+          //  MessageBox.Show(MovieListBox.ValueMember);
+          //  this.CategoryTextBox.Text = 
+        
+
+           
+            //switch((int)MovieListBox.SelectedIndex)
+            //{
+            //    case 2:
+            //    case 5:
+            //    case 13:
+            //    case 15:
+            //        this.CategoryTextBox.Text = CategoryList[0]; 
+            //        this.CostTextBox.Text = Cost[0].ToString();
+            //        break;
+            //    case 4:
+            //    case 6:
+            //    case 12:
+            //        this.CategoryTextBox.Text = CategoryList[1];
+            //        this.CostTextBox.Text = Cost[0].ToString();
+            //        break;
+            //    case 1:
+            //    case 3:
+            //    case 7:
+            //    case 9:
+            //    case 10:
+            //    case 16:
+            //        this.CategoryTextBox.Text = CategoryList[2];
+            //        this.CostTextBox.Text = Cost[1].ToString();
+            //        break;
+            //    case 0:
+            //    case 17:
+            //        this.CategoryTextBox.Text = CategoryList[3];
+            //        this.CostTextBox.Text = Cost[1].ToString();
+            //        break;
+            //    case 8:
+            //        this.CategoryTextBox.Text = CategoryList[4];
+            //        this.CostTextBox.Text = Cost[1].ToString();
+            //        break;
+            //    case 11:
+            //        this.CategoryTextBox.Text = CategoryList[5];
+            //        this.CostTextBox.Text = Cost[1].ToString();
+            //        break;
+            //    case 14:
+            //        this.CategoryTextBox.Text = CategoryList[6];
+            //        this.CostTextBox.Text = Cost[2].ToString();
+            //        break;
+            //    case 18:
+            //     case 19:
+            //        this.CategoryTextBox.Text = CategoryList[7];
+            //        this.CostTextBox.Text = Cost[3].ToString();
+            //        break;
+
+            //}
 
         
                  this.SelectionPictureBox.Image = this.MovieImageList.Images[(int)MovieListBox.SelectedIndex];
-              
+                 this.SelectionPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+  
+            //this.SelectionPictureBox.SizeMode=
             }
+
+        private void SelectionForm_Activated(object sender, EventArgs e)
+        {
+           // TODO: This line of code loads data into the 'cOMP123DataSet.Movies' table. You can move, or remove it, as needed.
+            this.moviesTableAdapter.Fill(this.cOMP123DataSet.Movies);
+        }
+
+    
+
+      
 
      
         }

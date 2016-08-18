@@ -22,11 +22,11 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
 
             ThirdForm = new StreamForm();
 
-            SecondForm = new OrderForm();
+            //SecondForm = new OrderForm();
            
             FirstForm = new SelectionForm();
             
-            MenuPrintForm = new PrintForm();
+          
             SplashScreen = new SplashScreenForm();
 
 
