@@ -17,7 +17,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
   * Create Date: 8th August 2016
   * Modified Date: 19th August 2016
   * Description: This Form displays which movie user choose and how much cost to get it (they come from DataBase Server)
-  * Version: 0.0.15 - Deleted PrintMenuForm.cs because I got a success to put printDialog and Document in OrderForm(Second Form)
+  * Version: 0.0.16 - Added MessageBox to ask if user copy the form or not
   */
     public partial class SelectionForm : Form
     {
