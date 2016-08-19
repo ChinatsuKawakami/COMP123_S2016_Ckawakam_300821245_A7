@@ -17,7 +17,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
   * Create Date: 8th August 2016
   * Modified Date: 19th August 2016
   * Description: This Form displays which movie user choose and how much cost to get it (they come from DataBase Server)
-  * Version: 0.0.17 - Resize all Form and change the size of literatures
+  * Version: 0.0.18 - Updated OrderForm to fix printPreview
   */
     public partial class SelectionForm : Form
     {
