@@ -8,11 +8,11 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
 {
     static class Program
     {
-        public static SplashScreenForm SplashScreen;
-        public static SelectionForm FirstForm;
-        public static OrderForm SecondForm;
-        public static StreamForm ThirdForm;
-        public static PrintForm MenuPrintForm;
+      //  public static SplashScreenForm SplashScreen;
+      //  public static SelectionForm FirstForm;
+      // public static OrderForm SecondForm;
+      // public static StreamForm ThirdForm;
+       // public static PrintForm MenuPrintForm;
         [STAThread]
         static void Main()
         {
@@ -20,17 +20,17 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            ThirdForm = new StreamForm();
+          //  ThirdForm = new StreamForm();
 
-            //SecondForm = new OrderForm();
-           
-            FirstForm = new SelectionForm();
-            
+          //  SecondForm = new OrderForm();
+          //  MenuPrintForm = new PrintForm();
+          // FirstForm = new SelectionForm();
+
           
-            SplashScreen = new SplashScreenForm();
+          //  SplashScreen = new SplashScreenForm();
 
 
-            Application.Run(SplashScreen);
+            Application.Run(new SplashScreenForm());
         }
     }
 }

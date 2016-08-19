@@ -75,17 +75,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>COMP123DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Models\Category.cs">
-      <DependentUpon>Category.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Category.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Category.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Movie.cs">
-      <DependentUpon>Movie.dbml</DependentUpon>
-    </Compile>
     <Compile Include="Models\Movie.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -116,6 +105,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="SplashScreenForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,16 +121,9 @@
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Models\Category.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Category.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Models\Movie.dbml.layout">
       <DependentUpon>Movie.dbml</DependentUpon>
-    </None>
-    <None Include="Models\Category.dbml.layout">
-      <DependentUpon>Category.dbml</DependentUpon>
     </None>
     <EmbeddedResource Include="OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
@@ -217,26 +200,26 @@
     <None Include="SplashImage\splashImage.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\MovieImages\cedarrapids.jpg" />
-    <Content Include="Properties\MovieImages\companymen.jpg" />
-    <Content Include="Properties\MovieImages\deathrace2.jpg" />
-    <Content Include="Properties\MovieImages\footloose.jpg" />
-    <Content Include="Properties\MovieImages\gnomeoandjuliet.jpg" />
-    <Content Include="Properties\MovieImages\iamnumberfour.jpg" />
-    <Content Include="Properties\MovieImages\justgowithit.jpg" />
-    <Content Include="Properties\MovieImages\nostringsattached.jpg" />
-    <Content Include="Properties\MovieImages\realsteel.jpg" />
-    <Content Include="Properties\MovieImages\sanctum.jpg" />
-    <Content Include="Properties\MovieImages\seasonofthewitch.jpg" />
-    <Content Include="Properties\MovieImages\thedilemma.jpg" />
-    <Content Include="Properties\MovieImages\theeagle.jpg" />
-    <Content Include="Properties\MovieImages\thegreenhornet.jpg" />
-    <Content Include="Properties\MovieImages\themechanic.jpg" />
-    <Content Include="Properties\MovieImages\theotherwoman.jpg" />
-    <Content Include="Properties\MovieImages\therite.jpg" />
-    <Content Include="Properties\MovieImages\theroommate.jpg" />
-    <Content Include="Properties\MovieImages\thewayback.jpg" />
-    <Content Include="Properties\MovieImages\waitingforever.jpg" />
+    <Content Include="MovieImages\cedarrapids.jpg" />
+    <Content Include="MovieImages\companymen.jpg" />
+    <Content Include="MovieImages\deathrace2.jpg" />
+    <Content Include="MovieImages\footloose.jpg" />
+    <Content Include="MovieImages\gnomeoandjuliet.jpg" />
+    <Content Include="MovieImages\iamnumberfour.jpg" />
+    <Content Include="MovieImages\justgowithit.jpg" />
+    <Content Include="MovieImages\nostringsattached.jpg" />
+    <Content Include="MovieImages\realsteel.jpg" />
+    <Content Include="MovieImages\sanctum.jpg" />
+    <Content Include="MovieImages\seasonofthewitch.jpg" />
+    <Content Include="MovieImages\thedilemma.jpg" />
+    <Content Include="MovieImages\theeagle.jpg" />
+    <Content Include="MovieImages\thegreenhornet.jpg" />
+    <Content Include="MovieImages\themechanic.jpg" />
+    <Content Include="MovieImages\theotherwoman.jpg" />
+    <Content Include="MovieImages\therite.jpg" />
+    <Content Include="MovieImages\theroommate.jpg" />
+    <Content Include="MovieImages\thewayback.jpg" />
+    <Content Include="MovieImages\waitingforever.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

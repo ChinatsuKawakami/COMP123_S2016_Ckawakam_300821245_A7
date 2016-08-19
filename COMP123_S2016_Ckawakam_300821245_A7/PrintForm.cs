@@ -13,14 +13,14 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
     
     public partial class PrintForm : Form
     {
-        public OrderForm SecondForm = Program.SecondForm;
+        public OrderForm SecondForm = new OrderForm();
         public PrintForm()
         {
             InitializeComponent();
         }
 
         private void PrintForm_Load(object sender, EventArgs e)
-        {
+        { 
             //Make a reference to this From from OrderForm
             this.SecondForm.MenuPrintForm = this;
             this.TitleResultLabel.Text = SecondForm.TitleTextBox.Text;

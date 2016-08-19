@@ -14,7 +14,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
     public partial class SplashScreenForm : Form
     {
         //Alias
-        public SelectionForm FirstForm = Program.FirstForm;
+        public SelectionForm FirstForm;// = Program.FirstForm;
 
         public SplashScreenForm()
         {
@@ -24,6 +24,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
         private void SplashScreenFromTimer_Tick(object sender, EventArgs e)
         {
             SplashScreenFromTimer.Enabled = false;
+            FirstForm = new SelectionForm();
             FirstForm.Show();
             this.Hide();
             FirstForm.FormClosed += FirstForm_FormClosed;

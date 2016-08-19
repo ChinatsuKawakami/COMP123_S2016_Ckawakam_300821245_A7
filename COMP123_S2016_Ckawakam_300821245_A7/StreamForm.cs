@@ -21,7 +21,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
         private void OKButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            //terminate??
+            //terminate
             Application.Exit();
         }
     }
