@@ -17,7 +17,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
   * Create Date: 8th August 2016
   * Modified Date: 19th August 2016
   * Description: This Form displays which movie user choose and how much cost to get it (they come from DataBase Server)
-  * Version: 0.0.16 - Added MessageBox to ask if user copy the form or not
+  * Version: 0.0.17 - Resize all Form and change the size of literatures
   */
     public partial class SelectionForm : Form
     {
@@ -26,7 +26,9 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
       
 
        // public List<Models.MovieDataContext> Movies = new List<Models.MovieDataContext>();
+    
 
+        //Make Two of Lists to store data which are category and DownloadCost
      public List<string> CategoryList = new List<string>();
          
       public List<double> Cost = new List<double>();
@@ -51,13 +53,16 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-
+            //instanciate the OrderForm(secondForm) 
             SecondForm = new OrderForm();
 
+            //Transfer SelectionForm's Title to OrderForm's Title
             this.SecondForm.TitleTextBox.Text = this.TitleTextBox.Text;
+            //Transfer SelectionForm's Category to OrderForm's Category
             this.SecondForm.CategoryTextBox.Text = this.CategoryTextBox.Text;
+            //Transfer SelectionForm's Cost to OrderForm's Cost
             this.SecondForm.CostTextBox.Text = this.CostTextBox.Text;
-            //this.SecondForm.SubTotalTextBox.Text = this.CostTextBox.Text;
+        
 
 
             this.SecondForm.OrderPictureBox.Image = this.SelectionPictureBox.Image;
@@ -68,7 +73,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
             SecondForm.FirstForm = this;
          
             
-                this.SecondForm.Show();
+            this.SecondForm.Show();
             
             // event handler for showing this form when SecondForm close
             this.SecondForm.FormClosed += SecondForm_close;
@@ -94,7 +99,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
            //  TODO: This line of code loads data into the 'cOMP123DataSet.Categories' table. You can move, or remove it, as needed.
       //   this.categoriesTableAdapter.Fill(this.cOMP123DataSet.Categories);
 
-
+            //Set Default Value for MovieListBox 
             MovieListBox.SelectedIndex = 0;
 
         }
@@ -102,13 +107,15 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
      
         private void MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Next Button can be pushed if user selects one of the movies
             NextButton.Enabled = true;
-
+            //Transfer MovieListBox's Title to TitleTextBox
             this.TitleTextBox.Text = MovieListBox.Text;
 
-
+            //Set MoviesImage in PictureBox refer to MovieListBox's SelectedIndex
             this.SelectionPictureBox.Image = this.MovieImageList.Images[(int)MovieListBox.SelectedIndex];
-          /* Category category = new Category();
+        
+            /* Category category = new Category();
             Category price = new Category();
            Movie movies = new Movie();
            MovieDataContext db = new MovieDataContext();
@@ -122,6 +129,8 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
            this.CategoryTextBox.Text = category.Category1.ToString();
             this.CostTextBox.Text = category.DownloadCost.ToString();
             */
+
+            //Category and DownLoadCost will be chose depends on SeletedIndex of MovieListBox
                  switch ((int)MovieListBox.SelectedIndex)
                 {
                     case 2:
@@ -171,8 +180,8 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
 
                 }
             
-
-          this.SelectionPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+         
+          //this.SelectionPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 
             
            
@@ -189,6 +198,7 @@ namespace COMP123_S2016_Ckawakam_300821245_A7
 
         }
 
+        
 
      
     
